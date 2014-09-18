@@ -1,0 +1,56 @@
+#! /bin/bash
+
+#
+# Thomas van der Fange, 2014
+#
+
+
+FILEPATH=$1
+SLICES=$2
+EXTENSION=$3
+
+FILENAME=`basename "${FILEPATH}" ${EXTENSION}`
+FILEDIR=`dirname "${FILEPATH}"`
+
+
+
+if [ $# -lt 3 ]; then
+	echo
+	echo "This is a function to cut audiofiles in 'x' equal pieces."
+	echo
+	echo "Please enter a filepath, the number of slices you'd like to make and the extension of your file."
+	echo
+	exit
+
+else
+	echo
+	echo "${FILENAME} will be cut into $SLICES pieces"
+	echo
+
+for (( i=1 ; i<=${SLICES} ; i++ ))
+
+do
+
+TOTALSAMPLES=`soxi -s "$1"`
+SLICESAMPLES=`expr ${TOTALSAMPLES} / ${SLICES}`
+x=0
+
+	x=`expr ${x} + ${SLICESAMPLES}`
+
+	sox "${FILEPATH}" "${i}"_"${FILENAME}${EXTENSION}" trim ${x}"s" ${SLICESAMPLES}"s" 
+	mv "${i}"_"${FILENAME}${EXTENSION}" "${FILEDIR}"
+	echo ""${i}"_"${FILENAME}${EXTENSION}" created"
+
+done
+
+echo
+echo Done"!"
+echo Bye.
+echo
+
+fi
+
+
+
+
+
