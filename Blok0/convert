@@ -1,0 +1,67 @@
+#! /bin/bash
+
+#
+# Thomas van der Fange, 2014
+#
+
+
+extIn=$1
+extOut=$2
+
+
+
+
+if [ $# -lt 2 ]; then
+	echo
+	echo "This is a function to encode audiofiles."
+	echo
+	echo "Please enter the current file extention of the file(s), and the file extention you want to convert to."
+	echo "exmp: converter wav mp3"
+	echo
+	exit
+
+else
+
+	numFiles=(*.${extIn})
+    numFiles=${#numFiles[@]}
+
+    echo
+    echo Number of files to convert: ${numFiles}
+	echo
+	read -p "Sure? (y/n) " -n 1 -r
+	echo
+
+	if [[ $REPLY =~ ^[Yy]$ ]]
+	then	
+
+		mkdir converted
+	
+
+		for file in *.${1}
+		
+			do
+				echo
+				echo "Converting ${file}"
+				echo
+				name=`basename "${file}" {extIn}`
+
+				lame -V2 "${file}" "${name}"."${extOut}"
+				mv "${file}"."${extOut}" converted/ 
+
+			done
+
+	fi
+
+
+
+echo
+echo Done"!"
+echo Bye.
+echo
+
+fi
+
+
+
+
+
