@@ -1,0 +1,17 @@
+#! /bin/bash
+
+#
+# Thomas van der Fange, 2014
+# 
+# Bash script for sinusperiode480hz.cpp
+#
+
+echo "Plotting sinusperiode480hz.cpp"
+
+	g++ -o sinusperiode480hz sinusperiode480hz.cpp
+	sinusperiode480hz > sinus.dat
+	gnuplot --persist -e 'plot "sinus.dat" u 1:2'
+
+echo
+echo "Done"
+echo

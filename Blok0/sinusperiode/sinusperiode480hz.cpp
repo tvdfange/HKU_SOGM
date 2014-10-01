@@ -12,8 +12,6 @@ int main ()
 	
   	int sampleRate = 48000;
   	int frequency = 480;
-
-
   	int samples = sampleRate / frequency;
 
    	// for loop execution
@@ -22,7 +20,7 @@ int main ()
    			double pi = 3.14159265358979323846;
    			double w = pi * 2 * frequency;
    			double x = (i / sampleRate);
-       		double y = sin(w*x); 
+       	double y = sin(w*x); 
 
        		cout << i << " " << y << endl;
        		
