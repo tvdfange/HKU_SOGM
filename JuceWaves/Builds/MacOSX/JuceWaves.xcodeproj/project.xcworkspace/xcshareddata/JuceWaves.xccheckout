@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>093CF20F-2E79-492B-823D-A5628E80E19C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>JuceWaves</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E42FA395283C9D5FEBBFC38CA46B6A60F16DC34A</key>
+		<string>https://github.com/tvdfange/HKU_SOGM.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>JuceWaves/Builds/MacOSX/JuceWaves.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E42FA395283C9D5FEBBFC38CA46B6A60F16DC34A</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/tvdfange/HKU_SOGM.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E42FA395283C9D5FEBBFC38CA46B6A60F16DC34A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E42FA395283C9D5FEBBFC38CA46B6A60F16DC34A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SOGM</string>
+		</dict>
+	</array>
+</dict>
+</plist>
