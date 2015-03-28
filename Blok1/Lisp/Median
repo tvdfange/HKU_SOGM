@@ -1,0 +1,17 @@
+(defun median (lst)
+  (let* ((lst (sort lst #'<))
+         (set-length (length lst))
+         (middle (truncate set-length 2)))
+
+    (if (oddp set-length)
+        (nth middle lst)
+        (/ (+ (nth middle lst) (nth (- middle 1) lst)) 2))))
+
+
+                                   
+
+
+
+(median '(1 1 1 2 2 2))
+
+
